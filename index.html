@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEKSA AI — Ультимативный ИИ-ассистент</title>
+    <title>LEKSA AI — Технологии будущего</title>
     <style>
         :root {
             --purple: #a855f7;
@@ -296,23 +295,23 @@
             }
         }
 
-        /* ============ ФИЧИ ============ */
-        .features-grid {
+        /* ============ ПРОДУКТЫ ============ */
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
         }
-        .feature-card {
+        .product-card {
             background: var(--surface);
             backdrop-filter: blur(20px);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 32px 26px;
+            padding: 40px 30px;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
-        .feature-card::before {
+        .product-card::before {
             content: '';
             position: absolute;
             top: -50%;
@@ -323,31 +322,63 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
-        .feature-card:hover::before {
+        .product-card:hover::before {
             opacity: 1;
         }
-        .feature-card:hover {
+        .product-card:hover {
             border-color: rgba(168, 85, 247, 0.35);
             transform: translateY(-10px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
         }
-        .feature-icon {
-            font-size: 2.5rem;
+        .product-icon {
+            font-size: 2.8rem;
             margin-bottom: 16px;
             display: block;
             position: relative;
         }
-        .feature-card h3 {
-            font-size: 1.2rem;
+        .product-card h3 {
+            font-size: 1.6rem;
             font-weight: 750;
             margin-bottom: 8px;
             position: relative;
+            background: linear-gradient(135deg, #c084fc, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .feature-card p {
+        .product-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .product-features {
+            list-style: none;
+            position: relative;
             color: var(--text-dim);
             font-size: 0.9rem;
-            line-height: 1.55;
+            line-height: 2.2;
+            margin-bottom: 20px;
+        }
+        .product-features li::before {
+            content: '✓';
+            color: #a855f7;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .product-platforms {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
             position: relative;
+        }
+        .platform-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            border: 1px solid var(--border);
         }
 
         /* ============ ТАРИФЫ ============ */
@@ -486,63 +517,6 @@
         .faq-item.open .faq-answer {
             max-height: 300px;
             padding: 0 24px 20px;
-        }
-
-        /* ============ ОТЗЫВЫ ============ */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .review-card {
-            background: var(--surface);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 28px 24px;
-            transition: var(--transition);
-        }
-        .review-card:hover {
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-6px);
-        }
-        .review-stars {
-            color: #fbbf24;
-            font-size: 1rem;
-            margin-bottom: 12px;
-            letter-spacing: 2px;
-        }
-        .review-text {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 16px;
-            font-style: italic;
-        }
-        .review-author {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .review-avatar {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #a855f7, #6366f1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 750;
-            font-size: 0.85rem;
-            color: #fff;
-        }
-        .review-name {
-            font-weight: 650;
-            font-size: 0.9rem;
-        }
-        .review-role {
-            color: var(--text-dim);
-            font-size: 0.75rem;
         }
 
         /* ============ CTA БАННЕР ============ */
@@ -694,60 +668,61 @@
             <div class="logo">LEKSA AI</div>
             <div class="header-actions">
                 <button class="btn btn-glass btn-sm" id="btnLogin">Войти</button>
-                <button class="btn btn-primary btn-sm">Скачать</button>
+                <a href="#products" class="btn btn-primary btn-sm">Продукты</a>
             </div>
         </header>
 
         <!-- ГЕРОЙ -->
         <section class="hero">
             <div class="container">
-                <span class="hero-badge">⚡ Ультимативный ассистент</span>
+                <span class="hero-badge">⚡ Технологии будущего</span>
                 <h1 class="hero-title">LEKSA AI</h1>
-                <p class="hero-sub">Голос, интеллект, скорость. Личный ИИ-союзник для работы, творчества и жизни.</p>
+                <p class="hero-sub">Умный мессенджер с ИИ, шифрованием и защищёнными чатами. Ваши данные — только ваши.</p>
                 <div class="hero-btns">
                     <a href="#pricing" class="btn btn-primary btn-lg">⚡ Попробовать бесплатно</a>
-                    <a href="#features" class="btn btn-glass btn-lg">▶ Смотреть обзор</a>
+                    <a href="#products" class="btn btn-glass btn-lg">▶ Наши продукты</a>
                 </div>
             </div>
             <div class="scroll-indicator">ЛИСТАЙ<span></span></div>
         </section>
 
-        <!-- ФИЧИ -->
-        <section class="section" id="features">
+        <!-- ПРОДУКТЫ -->
+        <section class="section" id="products">
             <div class="container">
-                <span class="section-label">Возможности</span>
-                <h2 class="section-title">Всё, что нужно в одном ассистенте</h2>
-                <p class="section-sub">LEKSA объединяет десятки ИИ-инструментов в единый интерфейс.</p>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <span class="feature-icon">🎙️</span>
-                        <h3>Живой голос</h3>
-                        <p>Общение голосом как с реальным человеком. Распознавание на 40+ языках в реальном времени.</p>
+                <span class="section-label">Продукты</span>
+                <h2 class="section-title">Наши технологии</h2>
+                <p class="section-sub">Два продукта, которые меняют представление о безопасности и коммуникации.</p>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <span class="product-icon">💬</span>
+                        <h3>Leksa AI</h3>
+                        <p>Умный мессенджер нового поколения с защищёнными чатами, ИИ-ассистентом, сейфом для документов и диктовкой.</p>
+                        <ul class="product-features">
+                            <li>Сквозное шифрование чатов</li>
+                            <li>Встроенный ИИ-ассистент</li>
+                            <li>Сейф для документов и паролей</li>
+                            <li>Голосовая диктовка</li>
+                        </ul>
+                        <div class="product-platforms">
+                            <span class="platform-tag">📱 Android</span>
+                            <span class="platform-tag">🍎 iOS (Soon)</span>
+                            <span class="platform-tag">🖥️ Windows</span>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="feature-icon">🧠</span>
-                        <h3>Бесконечная память</h3>
-                        <p>Помнит весь контекст диалога. Никаких «я забыл, о чём мы говорили».</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon">🔒</span>
-                        <h3>Полная приватность</h3>
-                        <p>Локальное шифрование. Никаких логов на серверах. Ваши данные — только ваши.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon">⚡</span>
-                        <h3>Мгновенный ответ</h3>
-                        <p>Оптимизированные нейросети выдают ответ быстрее, чем вы печатаете.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon">🌐</span>
-                        <h3>Мульти-агенты</h3>
-                        <p>Один ассистент — сотни навыков. Код, дизайн, переводы, анализ данных.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon">📱</span>
-                        <h3>Везде и всегда</h3>
-                        <p>iOS, Android, Web, Telegram. Ваш ассистент всегда под рукой.</p>
+                    <div class="product-card">
+                        <span class="product-icon">🔐</span>
+                        <h3>Leksa SecureKey</h3>
+                        <p>Защита вашей флешки по стандарту AES-256. Вставил — ввёл пароль — работает. Никаких установок, никаких прав администратора.</p>
+                        <ul class="product-features">
+                            <li>Шифрование AES-256</li>
+                            <li>Портативный .exe для Windows</li>
+                            <li>APK для Android</li>
+                            <li>Не требует прав администратора</li>
+                        </ul>
+                        <div class="product-platforms">
+                            <span class="platform-tag">🖥️ Windows</span>
+                            <span class="platform-tag">📱 Android</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -804,50 +779,6 @@
             </div>
         </section>
 
-        <!-- ОТЗЫВЫ -->
-        <section class="section" id="reviews">
-            <div class="container">
-                <span class="section-label text-center mx-auto" style="display:table;">Отзывы</span>
-                <h2 class="section-title text-center">Что говорят пользователи</h2>
-                <p class="section-sub text-center mx-auto">Присоединяйтесь к тысячам довольных юзеров LEKSA.</p>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="review-stars">★★★★★</div>
-                        <p class="review-text">«LEKSA заменила мне трёх ассистентов. Голосовые команды — это просто магия. Экономит мне часов 15 в неделю.»</p>
-                        <div class="review-author">
-                            <div class="review-avatar">АК</div>
-                            <div>
-                                <div class="review-name">Алексей К.</div>
-                                <div class="review-role">CEO, TechStart</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">★★★★★</div>
-                        <p class="review-text">«Я дизайнер, и LEKSA помогает мне с мудбордами, текстами и даже генерацией идей. Лучший ИИ-ассистент на рынке.»</p>
-                        <div class="review-author">
-                            <div class="review-avatar">МС</div>
-                            <div>
-                                <div class="review-name">Мария С.</div>
-                                <div class="review-role">Lead Designer</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">★★★★★</div>
-                        <p class="review-text">«Купил Pro подписку за USDT — всё прошло моментально. Ассистент реально понимает контекст, не тупит.»</p>
-                        <div class="review-author">
-                            <div class="review-avatar">ДВ</div>
-                            <div>
-                                <div class="review-name">Дмитрий В.</div>
-                                <div class="review-role">Разработчик</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- FAQ -->
         <section class="section" id="faq">
             <div class="container">
@@ -871,8 +802,8 @@
                         <div class="faq-answer">LEKSA доступна на iOS, Android, в веб-версии и как Telegram Mini App. Все версии синхронизируются между собой.</div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">Безопасны ли мои данные? <span class="faq-arrow">+</span></button>
-                        <div class="faq-answer">Абсолютно. Мы используем сквозное шифрование, не храним логи на серверах и не передаём данные третьим лицам. Приватность — наш главный принцип.</div>
+                        <button class="faq-question">Насколько безопасен SecureKey? <span class="faq-arrow">+</span></button>
+                        <div class="faq-answer">SecureKey использует AES-256 — стандарт, одобренный правительством США для секретных документов. Без пароля расшифровать данные невозможно.</div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">Как отменить подписку? <span class="faq-arrow">+</span></button>
@@ -899,13 +830,13 @@
                 <div class="footer-grid">
                     <div class="footer-col">
                         <h4>LEKSA AI</h4>
-                        <a href="#features">Возможности</a>
+                        <a href="#products">Продукты</a>
                         <a href="#pricing">Тарифы</a>
-                        <a href="#reviews">Отзывы</a>
+                        <a href="#faq">FAQ</a>
                     </div>
                     <div class="footer-col">
                         <h4>Поддержка</h4>
-                        <a href="#faq">FAQ</a>
+                        <a href="mailto:support@leksa.dev">support@leksa.dev</a>
                         <a href="#">Документация</a>
                         <a href="#">Контакты</a>
                     </div>
@@ -921,7 +852,7 @@
                         <a href="#">Discord</a>
                     </div>
                 </div>
-                <div class="footer-bottom">© 2026 LEKSA AI. Все права защищены. Оплата в USDT.</div>
+                <div class="footer-bottom">© 2026 LEKSA AI. Все права защищены. Secured by Leksa Encryption Protocol.</div>
             </div>
         </footer>
     </div>
@@ -1113,3 +1044,4 @@
     </script>
 </body>
 </html>
+
