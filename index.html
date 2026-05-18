@@ -18,7 +18,7 @@
             --radius-sm: 14px;
             --transition: 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-
+ 
         * {
             margin: 0;
             padding: 0;
@@ -36,7 +36,7 @@
             cursor: default;
             line-height: 1.5;
         }
-
+ 
         /* ============ 3D СЦЕНА ============ */
         #canvas-container {
             position: fixed;
@@ -50,7 +50,7 @@
         canvas {
             display: block;
         }
-
+ 
         /* ============ ОБЩИЕ БЛОКИ ============ */
         .app {
             position: relative;
@@ -103,7 +103,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-
+ 
         /* ============ КНОПКИ ============ */
         .btn {
             display: inline-flex;
@@ -153,7 +153,7 @@
             width: 100%;
             justify-content: center;
         }
-
+ 
         /* ============ ХЕДЕР ============ */
         .header {
             position: fixed;
@@ -184,7 +184,7 @@
             gap: 10px;
             align-items: center;
         }
-
+ 
         /* ============ ГЕРОЙ ============ */
         .hero {
             min-height: 100vh;
@@ -294,7 +294,7 @@
                 transform: translateY(0);
             }
         }
-
+ 
         /* ============ ПРОДУКТЫ ============ */
         .products-grid {
             display: grid;
@@ -380,7 +380,47 @@
             color: var(--text-dim);
             border: 1px solid var(--border);
         }
-
+ 
+        /* ============ ВОЗМОЖНОСТИ LEKSA AI (23 ФИЧИ) ============ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+        .feature-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 18px 22px;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(168, 85, 247, 0.35);
+            transform: translateX(4px);
+        }
+        .feature-icon {
+            font-size: 1.6rem;
+            min-width: 40px;
+            text-align: center;
+        }
+        .feature-text h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, #e0d4ff, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .feature-text p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.4;
+        }
+ 
         /* ============ ТАРИФЫ ============ */
         .pricing-grid {
             display: grid;
@@ -461,7 +501,7 @@
             font-weight: 700;
             margin-right: 10px;
         }
-
+ 
         /* ============ FAQ ============ */
         .faq-list {
             max-width: 720px;
@@ -518,7 +558,7 @@
             max-height: 300px;
             padding: 0 24px 20px;
         }
-
+ 
         /* ============ CTA БАННЕР ============ */
         .cta-banner {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(96, 165, 250, 0.1));
@@ -553,7 +593,7 @@
             position: relative;
             font-size: 1rem;
         }
-
+ 
         /* ============ МОДАЛКИ ============ */
         .modal-overlay {
             position: fixed;
@@ -621,7 +661,7 @@
         .modal-close:hover {
             opacity: 1;
         }
-
+ 
         /* ============ ФУТЕР ============ */
         .footer {
             border-top: 1px solid var(--border);
@@ -658,10 +698,10 @@
     </style>
 </head>
 <body>
-
+ 
     <!-- 3D -->
     <div id="canvas-container"></div>
-
+ 
     <div class="app">
         <!-- ХЕДЕР -->
         <header class="header">
@@ -671,7 +711,7 @@
                 <a href="#products" class="btn btn-primary btn-sm">Продукты</a>
             </div>
         </header>
-
+ 
         <!-- ГЕРОЙ -->
         <section class="hero">
             <div class="container">
@@ -685,7 +725,7 @@
             </div>
             <div class="scroll-indicator">ЛИСТАЙ<span></span></div>
         </section>
-
+ 
         <!-- ПРОДУКТЫ -->
         <section class="section" id="products">
             <div class="container">
@@ -727,7 +767,41 @@
                 </div>
             </div>
         </section>
-
+ 
+        <!-- ВОЗМОЖНОСТИ LEKSA AI — 23 ФИЧИ -->
+        <section class="section">
+            <div class="container">
+                <span class="section-label text-center mx-auto" style="display:table;">Возможности</span>
+                <h2 class="section-title text-center">Всё, что умеет LEKSA AI</h2>
+                <p class="section-sub text-center mx-auto">23 инструмента для работы, общения и безопасности — в одном приложении.</p>
+                <div class="features-grid">
+                    <div class="feature-item"><div class="feature-icon">🎙️</div><div class="feature-text"><h4>Всегда на связи</h4><p>Живой голосовой ассистент. Скажи «Лекса, приём» — и она выполнит команду без касания экрана.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📞</div><div class="feature-text"><h4>Управление звонками и сообщениями</h4><p>«Лекса, позвони Сергею» или «отправь сообщение Маше в WhatsApp» — сама найдёт контакт.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🎫</div><div class="feature-text"><h4>Поиск билетов, товаров и цен</h4><p>Найди билет на Озон. Москва — Ереван на 25 мая. Лучшие цены и варианты.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📄</div><div class="feature-text"><h4>Сканер и распознавание документов</h4><p>Наведи камеру на бумагу, чек, PDF — Лекса переведёт в цифру и распознает текст.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🧾</div><div class="feature-text"><h4>Умная бухгалтерия</h4><p>Считает доходы и расходы, напоминает об оплатах, готовит сводки за месяц.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">⚖️</div><div class="feature-text"><h4>Юридический помощник</h4><p>Проверка контрагентов, шаблоны договоров, анализ рисков простым языком.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📝</div><div class="feature-text"><h4>Генерация договоров под диктовку</h4><p>Наговори суть сделки — ИИ сам создаст готовый документ.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🗂️</div><div class="feature-text"><h4>Работа с любыми файлами</h4><p>PDF, Excel, Word — открывай, редактируй, конвертируй, сравнивай версии.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🔒</div><div class="feature-text"><h4>Защищённые заметки и напоминалки</h4><p>Голосом или текстом. Лекса напомнит в нужное время. Всё зашифровано.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🔐</div><div class="feature-text"><h4>Сейф-менеджер</h4><p>Пароли, сканы паспорта, доступы — под защитой AES-256. Мастер-ключ или биометрия.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📧</div><div class="feature-text"><h4>Отправка файлов на почту</h4><p>Отправь документ себе на email и работай на ПК. Никаких облаков.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">💬</div><div class="feature-text"><h4>Защищённые чаты со сквозным шифрованием</h4><p>Текст и голос, которые не прочитает никто, даже мы.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📹</div><div class="feature-text"><h4>Аудио- и видеозвонки</h4><p>С шифрованием. Один на один или группа. С записью и расшифровкой.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📎</div><div class="feature-text"><h4>Обмен файлами и изображениями</h4><p>Любые файлы в чатах — документы, фото, архивы. С предпросмотром и редакцией.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🌐</div><div class="feature-text"><h4>Переводчик в реальном времени</h4><p>Говоришь на русском — собеседник слышит на английском. В чатах и звонках.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🎤</div><div class="feature-text"><h4>Транскрибация голосовых сообщений</h4><p>Переводит голосовые и аудио в текст. Удобно, когда не можешь прослушать.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">🔍</div><div class="feature-text"><h4>Умный поиск по всем данным</h4><p>«Лекса, найди счёт от ООО Ромашка за март» — и готово.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📊</div><div class="feature-text"><h4>Автоматические отчёты</h4><p>Еженедельный отчёт: финансы, проекты, задачи — всё в одном документе.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📅</div><div class="feature-text"><h4>Интеграция с календарём</h4><p>Назначает встречи, напоминает о дедлайнах, синхронизация с Google/Apple.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📴</div><div class="feature-text"><h4>Оффлайн-режим</h4><p>Работает без интернета. Заметки, файлы, напоминалки. При подключении — синхронизация.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">💰</div><div class="feature-text"><h4>Внутренний кошелёк (USDT / USDC)</h4><p>Покупай USDT или USDC, оплачивай подписку прямо из приложения. Без банков.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">✈️</div><div class="feature-text"><h4>Отправка сообщений в другие мессенджеры</h4><p>Telegram, WhatsApp и другие — по голосовой команде.</p></div></div>
+                    <div class="feature-item"><div class="feature-icon">📈</div><div class="feature-text"><h4>Анализ рынка</h4><p>Собирает данные о ценах, конкурентах и трендах. «Почём аренда офиса в Москве?» — сводка готова.</p></div></div>
+                </div>
+            </div>
+        </section>
+ 
         <!-- ТАРИФЫ -->
         <section class="section" id="pricing">
             <div class="container">
@@ -774,11 +848,10 @@
                         <button class="btn btn-glass btn-block btn-subscribe">Оформить</button>
                     </div>
                 </div>
-                <p style="text-align:center;margin-top:20px;font-size:0.8rem;color:var(--text-dim);">💳 Оплата в USDT
-                    (TRC-20 / ERC-20). Мгновенная активация.</p>
+                <p style="text-align:center;margin-top:20px;font-size:0.8rem;color:var(--text-dim);">💳 Оплата в USDT (TRC-20 / ERC-20). Мгновенная активация.</p>
             </div>
         </section>
-
+ 
         <!-- FAQ -->
         <section class="section" id="faq">
             <div class="container">
@@ -787,18 +860,15 @@
                 <p class="section-sub text-center mx-auto">Всё, что вы хотели знать о LEKSA AI.</p>
                 <div class="faq-list">
                     <div class="faq-item">
-                        <button class="faq-question">Как оплатить подписку криптовалютой? <span
-                                class="faq-arrow">+</span></button>
+                        <button class="faq-question">Как оплатить подписку криптовалютой? <span class="faq-arrow">+</span></button>
                         <div class="faq-answer">Выберите тариф, нажмите «Оформить» — откроется окно с адресом кошелька USDT. Отправьте точную сумму, и подписка активируется автоматически в течение нескольких минут.</div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">Можно ли пользоваться бесплатно? <span
-                                class="faq-arrow">+</span></button>
+                        <button class="faq-question">Можно ли пользоваться бесплатно? <span class="faq-arrow">+</span></button>
                         <div class="faq-answer">Да, тариф «Старт» полностью бесплатный. Вы получаете 30 запросов в день и базовые функции. Этого достаточно, чтобы оценить возможности LEKSA.</div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">Какие платформы поддерживаются? <span
-                                class="faq-arrow">+</span></button>
+                        <button class="faq-question">Какие платформы поддерживаются? <span class="faq-arrow">+</span></button>
                         <div class="faq-answer">LEKSA доступна на iOS, Android, в веб-версии и как Telegram Mini App. Все версии синхронизируются между собой.</div>
                     </div>
                     <div class="faq-item">
@@ -812,7 +882,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- CTA БАННЕР -->
         <section class="section">
             <div class="container">
@@ -823,7 +893,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- ФУТЕР -->
         <footer class="footer">
             <div class="container">
@@ -856,7 +926,7 @@
             </div>
         </footer>
     </div>
-
+ 
     <!-- МОДАЛКИ -->
     <div class="modal-overlay" id="modalLogin">
         <div class="modal">
@@ -865,24 +935,20 @@
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Пароль">
             <button class="btn btn-primary btn-block">Войти</button>
-            <p style="margin-top:14px;font-size:0.8rem;color:var(--text-dim);">Нет аккаунта? <a href="#"
-                    style="color:#a855f7;">Создать</a></p>
+            <p style="margin-top:14px;font-size:0.8rem;color:var(--text-dim);">Нет аккаунта? <a href="#" style="color:#a855f7;">Создать</a></p>
         </div>
     </div>
     <div class="modal-overlay" id="modalSubscribe">
         <div class="modal">
             <button class="modal-close btn-close-modal">✕</button>
             <h2>Оформить подписку</h2>
-            <p style="color:var(--text-dim);margin-bottom:16px;">Отправьте <strong id="subAmount">14.99 USDT</strong> на
-                адрес:</p>
-            <input type="text" value="0xLEKSA1234567890EXAMPLE" readonly style="text-align:center;font-size:0.8rem;"
-                id="walletAddr">
+            <p style="color:var(--text-dim);margin-bottom:16px;">Отправьте <strong id="subAmount">14.99 USDT</strong> на адрес:</p>
+            <input type="text" value="0xLEKSA1234567890EXAMPLE" readonly style="text-align:center;font-size:0.8rem;" id="walletAddr">
             <button class="btn btn-primary btn-block" id="btnCopyAddr">📋 Скопировать адрес</button>
-            <p style="margin-top:12px;font-size:0.75rem;color:var(--text-dim);">Подписка активируется после 1
-                подтверждения сети.</p>
+            <p style="margin-top:12px;font-size:0.75rem;color:var(--text-dim);">Подписка активируется после 1 подтверждения сети.</p>
         </div>
     </div>
-
+ 
     <!-- Three.js -->
     <script type="importmap">
         { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
@@ -897,7 +963,7 @@
         renderer.setSize(innerWidth, innerHeight);
         renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
         container.appendChild(renderer.domElement);
-
+ 
         const pGeo = new THREE.BufferGeometry();
         const c = 2000;
         const pos = new Float32Array(c * 3);
@@ -909,19 +975,18 @@
             const th = Math.random() * Math.PI * 2;
             const ph = Math.acos(2 * Math.random() - 1);
             pos[i] = r * Math.sin(ph) * Math.cos(th);
-            pos[i + 1] = r * Math.sin(ph) * Math.sin(th);
-            pos[i + 2] = r * Math.cos(ph);
+            pos[i+1] = r * Math.sin(ph) * Math.sin(th);
+            pos[i+2] = r * Math.cos(ph);
             const mix = c1.clone().lerp(c2, Math.random());
             col[i] = mix.r;
-            col[i + 1] = mix.g;
-            col[i + 2] = mix.b;
+            col[i+1] = mix.g;
+            col[i+2] = mix.b;
         }
         pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
         pGeo.setAttribute('color', new THREE.BufferAttribute(col, 3));
-        const particles = new THREE.Points(pGeo, new THREE.PointsMaterial({ size: 0.022, vertexColors: true,
-            blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.8 }));
+        const particles = new THREE.Points(pGeo, new THREE.PointsMaterial({ size: 0.022, vertexColors: true, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.8 }));
         scene.add(particles);
-
+ 
         const cuGeo = new THREE.BufferGeometry();
         const cuPos = new Float32Array(500 * 3);
         for (let i = 0; i < 500 * 3; i += 3) {
@@ -929,26 +994,22 @@
             const a = t * Math.PI * 8;
             const r = 3 + Math.sin(t * Math.PI * 4) * 1.5;
             cuPos[i] = Math.cos(a) * r;
-            cuPos[i + 1] = (t - 0.5) * 9;
-            cuPos[i + 2] = Math.sin(a) * r * 0.6;
+            cuPos[i+1] = (t - 0.5) * 9;
+            cuPos[i+2] = Math.sin(a) * r * 0.6;
         }
         cuGeo.setAttribute('position', new THREE.BufferAttribute(cuPos, 3));
-        const curve = new THREE.Points(cuGeo, new THREE.PointsMaterial({ size: 0.035, color: '#c084fc',
-            blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.7 }));
+        const curve = new THREE.Points(cuGeo, new THREE.PointsMaterial({ size: 0.035, color: '#c084fc', blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.7 }));
         scene.add(curve);
-
-        const r1 = new THREE.Mesh(new THREE.TorusGeometry(2.9, 0.015, 32, 200), new THREE.MeshBasicMaterial({ color: '#a78bfa',
-            blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.35 }));
+ 
+        const r1 = new THREE.Mesh(new THREE.TorusGeometry(2.9, 0.015, 32, 200), new THREE.MeshBasicMaterial({ color: '#a78bfa', blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.35 }));
         r1.rotation.x = Math.PI / 3;
         scene.add(r1);
-        const r2 = new THREE.Mesh(new THREE.TorusGeometry(3.3, 0.01, 16, 180), new THREE.MeshBasicMaterial({ color: '#60a5fa',
-            blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.3 }));
+        const r2 = new THREE.Mesh(new THREE.TorusGeometry(3.3, 0.01, 16, 180), new THREE.MeshBasicMaterial({ color: '#60a5fa', blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.3 }));
         r2.rotation.x = -Math.PI / 4;
         r2.rotation.y = Math.PI / 5;
         scene.add(r2);
-
-        const core = new THREE.Mesh(new THREE.SphereGeometry(0.18, 32, 32), new THREE.MeshBasicMaterial({ color: '#fff',
-            blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.9 }));
+ 
+        const core = new THREE.Mesh(new THREE.SphereGeometry(0.18, 32, 32), new THREE.MeshBasicMaterial({ color: '#fff', blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.9 }));
         scene.add(core);
         const glowGeo = new THREE.SphereGeometry(0.45, 32, 32);
         const glowMat = new THREE.ShaderMaterial({
@@ -961,17 +1022,11 @@
         });
         const glow = new THREE.Mesh(glowGeo, glowMat);
         scene.add(glow);
-
-        let mx = 0,
-            my = 0,
-            tmx = 0,
-            tmy = 0;
-        document.addEventListener('mousemove', e => { tmx = (e.clientX / innerWidth) * 2 - 1;
-            tmy = -(e.clientY / innerHeight) * 2 + 1; });
-        window.addEventListener('deviceorientation', e => { if (e.gamma != null) { tmx = Math.max(-1, Math.min(1, e
-                    .gamma / 45));
-                tmy = Math.max(-1, Math.min(1, e.beta / 45)); } });
-
+ 
+        let mx = 0, my = 0, tmx = 0, tmy = 0;
+        document.addEventListener('mousemove', e => { tmx = (e.clientX / innerWidth) * 2 - 1; tmy = -(e.clientY / innerHeight) * 2 + 1; });
+        window.addEventListener('deviceorientation', e => { if (e.gamma != null) { tmx = Math.max(-1, Math.min(1, e.gamma / 45)); tmy = Math.max(-1, Math.min(1, e.beta / 45)); } });
+ 
         function animate() {
             requestAnimationFrame(animate);
             const dt = 0.016;
@@ -996,28 +1051,22 @@
             renderer.render(scene, cam);
         }
         animate();
-        window.addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight;
-            cam.updateProjectionMatrix();
-            renderer.setSize(innerWidth, innerHeight); });
+        window.addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
     </script>
-
+ 
     <!-- ЛОГИКА -->
     <script>
         const $ = s => document.querySelector(s);
         const $$ = s => document.querySelectorAll(s);
-
+ 
         // Модалки
         const modalLogin = $('#modalLogin');
         const modalSub = $('#modalSubscribe');
         $('#btnLogin').addEventListener('click', () => modalLogin.classList.add('active'));
-        $$('.btn-close-modal').forEach(b => b.addEventListener('click', () => { modalLogin.classList.remove(
-                'active');
-            modalSub.classList.remove('active'); }));
-        [modalLogin, modalSub].forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList
-                .remove('active'); }));
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') { modalLogin.classList.remove('active');
-                modalSub.classList.remove('active'); } });
-
+        $$('.btn-close-modal').forEach(b => b.addEventListener('click', () => { modalLogin.classList.remove('active'); modalSub.classList.remove('active'); }));
+        [modalLogin, modalSub].forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList.remove('active'); }));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') { modalLogin.classList.remove('active'); modalSub.classList.remove('active'); } });
+ 
         // Подписка
         $$('.btn-subscribe').forEach(b => b.addEventListener('click', () => {
             const card = b.closest('.pricing-card');
@@ -1034,7 +1083,7 @@
             btn.textContent = '✅ Скопировано!';
             setTimeout(() => btn.textContent = '📋 Скопировать адрес', 2000);
         });
-
+ 
         // FAQ аккордеон
         $$('.faq-question').forEach(q => q.addEventListener('click', () => {
             const item = q.parentElement;
@@ -1044,4 +1093,5 @@
     </script>
 </body>
 </html>
+
 
