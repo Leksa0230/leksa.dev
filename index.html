@@ -1,94 +1,182 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#020611">
-<title>LEKSA AI — AI for a better you</title>
-<meta name="description" content="LEKSA AI — AI, мессенджер, документы, блокнот, сейф и персонализация в одной цифровой среде.">
-<style>
-html,body{margin:0;background:#02050b;color:#fff;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
-body{overflow-x:hidden}
-.stage{position:relative;width:100%;margin:0 auto;line-height:0;background:#02050b}
-.page-art{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
-.hotspot{position:absolute;display:block;z-index:10;border:0;background:transparent;text-decoration:none;color:transparent;
-        border-radius:16px;cursor:pointer;line-height:1}
-.hotspot:focus-visible{outline:3px solid #66cfff;outline-offset:2px;background:rgba(74,113,255,.10)}
-/* Navigation */
-.hs-home{left:23.3%;top:0.8%;width:6.8%;height:2.1%}
-.hs-features{left:30.1%;top:.8%;width:9.2%;height:2.1%}
-.hs-products{left:39.4%;top:.8%;width:7.4%;height:2.1%}
-.hs-security{left:47.8%;top:.8%;width:9.2%;height:2.1%}
-.hs-reviews{left:58.0%;top:.8%;width:7.2%;height:2.1%}
-.hs-support{left:65.6%;top:.8%;width:8.3%;height:2.1%}
-.hs-top-download{left:85.5%;top:.5%;width:11.9%;height:2.9%}
-/* Hero download buttons */
-.hs-android-hero{left:4.2%;top:25.7%;width:19.8%;height:3.9%}
-.hs-windows-hero{left:25.4%;top:25.7%;width:19.8%;height:3.9%}
-/* Feature section anchors */
-.hs-chat{left:3.8%;top:47.4%;width:14.4%;height:16.8%}
-.hs-docs{left:19.0%;top:47.4%;width:14.5%;height:16.8%}
-.hs-notes{left:34.2%;top:47.4%;width:14.4%;height:16.8%}
-.hs-msg{left:49.5%;top:47.4%;width:14.4%;height:16.8%}
-.hs-vault{left:64.7%;top:47.4%;width:14.4%;height:16.8%}
-.hs-personal{left:79.9%;top:47.4%;width:16.8%;height:16.8%}
-/* Product buttons */
-.hs-leksa-more{left:12.5%;top:75.6%;width:13.2%;height:3.0%}
-.hs-securekey{left:59.5%;top:75.6%;width:13.3%;height:3.0%}
-/* Bottom CTA */
-.hs-android-bottom{left:49.5%;top:88.3%;width:16.5%;height:3.8%}
-.hs-windows-bottom{left:67.1%;top:88.3%;width:17.3%;height:3.8%}
-/* Footer links */
-.hs-about{left:21.4%;top:96.5%;width:4.8%;height:1.8%}
-.hs-support-bottom{left:27.0%;top:96.5%;width:6.9%;height:1.8%}
-.hs-privacy{left:34.4%;top:96.5%;width:15.8%;height:1.8%}
-.hs-terms{left:50.3%;top:96.5%;width:13.9%;height:1.8%}
-
-.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;
-overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-
-@media (min-width:1450px){
-  .stage{max-width:1450px;box-shadow:0 0 120px rgba(34,79,179,.12)}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050816">
+  <meta name="description" content="LEKSA AI — AI-помощник, мессенджер, документы, блокнот, сейф, персонализация и семейная экосистема.">
+  <title>LEKSA AI — AI for a better you</title>
+  <link rel="preload" href="assets/scene.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/leksa-favicon.png">
+  <link rel="apple-touch-icon" href="assets/leksa-favicon.png">
 </head>
 <body>
-<div class="stage" id="top">
-  <img class="page-art" src="leksa-approved-page.png" alt="LEKSA AI — официальный сайт">
+  <div class="scene" aria-hidden="true">
+    <div class="scene__bg"></div>
+    <div class="scene__shade"></div>
+    <div class="scene__noise"></div>
+    <div class="scene__stars" id="stars"></div>
+  </div>
 
-  <a class="hotspot hs-home" href="#top" aria-label="Главная">Главная</a>
-  <a class="hotspot hs-features" href="#features" aria-label="Возможности">Возможности</a>
-  <a class="hotspot hs-products" href="#products" aria-label="Продукты">Продукты</a>
-  <a class="hotspot hs-security" href="#security" aria-label="Безопасность">Безопасность</a>
-  <a class="hotspot hs-reviews" href="#security" aria-label="Отзывы">Отзывы</a>
-  <a class="hotspot hs-support" href="mailto:support@leksa.dev" aria-label="Поддержка">Поддержка</a>
-  <a class="hotspot hs-top-download" href="#download" aria-label="Скачать LEKSA">Скачать</a>
+  <header class="header shell">
+    <a class="brand" href="#home" aria-label="LEKSA AI home">
+      <span class="brand__mark" aria-hidden="true"><img src="assets/leksa-mark.png" alt=""></span>
+      <span class="brand__text"><b>LEKSA</b><small>AI FOR A BETTER YOU</small></span>
+    </a>
 
-  <!-- Download links are intentionally placeholders until real files are supplied -->
-  <a class="hotspot hs-android-hero" href="#download" aria-label="Скачать LEKSA для Android">Android</a>
-  <a class="hotspot hs-windows-hero" href="#download" aria-label="Скачать LEKSA для Windows">Windows</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#features" data-i18n="nav_features">Возможности</a>
+      <a href="#products" data-i18n="nav_products">Продукты</a>
+      <a href="#security" data-i18n="nav_security">Безопасность</a>
+      <a href="#family" data-i18n="nav_family">Family Constellation</a>
+      <a href="#support" data-i18n="nav_support">Поддержка</a>
+    </nav>
 
-  <span id="features" class="sr-only">Возможности</span>
-  <a class="hotspot hs-chat" href="#features" aria-label="Чат с ИИ">Чат с ИИ</a>
-  <a class="hotspot hs-docs" href="#features" aria-label="Мои документы">Мои документы</a>
-  <a class="hotspot hs-notes" href="#features" aria-label="Блокнот">Блокнот</a>
-  <a class="hotspot hs-msg" href="#features" aria-label="Мессенджер">Мессенджер</a>
-  <a class="hotspot hs-vault" href="#features" aria-label="Сейф менеджер">Сейф менеджер</a>
-  <a class="hotspot hs-personal" href="#features" aria-label="Персонализация">Персонализация</a>
+    <div class="header__actions">
+      <div class="language">
+        <button class="language__toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+          <img class="language__flag" id="langFlag" src="assets/flags/ru.svg" alt="Русский">
+          <span class="language__name" id="langName">Русский</span>
+          <span class="chev">⌄</span>
+        </button>
+        <div class="language__menu" id="langMenu" role="listbox" hidden></div>
+      </div>
+      <button class="btn btn--primary btn--small" data-open="downloads"><span>↓</span><span data-i18n="download">Скачать</span></button>
+      <button class="hamb" id="hamb" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
 
-  <span id="products" class="sr-only">Продукты</span>
-  <a class="hotspot hs-leksa-more" href="#products" aria-label="Подробнее о LEKSA AI">LEKSA AI</a>
-  <a class="hotspot hs-securekey" href="#products" aria-label="LEKSA SecureKey">LEKSA SecureKey</a>
+  <main>
+    <section class="hero shell" id="home">
+      <div class="hero__copy glass reveal">
+        <div class="eyebrow" data-i18n="hero_eyebrow">БОЛЬШЕ, ЧЕМ ПРОСТО ПРИЛОЖЕНИЕ</div>
+        <div class="hero__logo-line"><span>LEKSA</span><em>AI</em></div>
+        <h1 data-i18n="hero_title">Твой личный AI‑помощник в реальном мире</h1>
+        <p class="hero__lead" data-i18n="hero_lead">Работа. Учёба. Документы. Идеи. Безопасность. Общение. Всё — в одной экосистеме.</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" data-open="downloads"><span>↓</span><span data-i18n="hero_cta">Выбрать платформу</span></button>
+          <a class="btn btn--glass" href="#features" data-i18n="hero_more">Посмотреть возможности</a>
+        </div>
+        <div class="hero__facts">
+          <span><b data-i18n="fact_one">Одна экосистема</b><small data-i18n="fact_one_sub">вместо десятка сервисов</small></span>
+          <span><b data-i18n="fact_private">Приватность</b><small data-i18n="fact_private_sub">под твоим контролем</small></span>
+          <span><b data-i18n="fact_devices">На всех устройствах</b><small data-i18n="fact_devices_sub">единая логика</small></span>
+        </div>
+      </div>
 
-  <span id="security" class="sr-only">Безопасность</span>
-  <span id="download" class="sr-only">Загрузка</span>
-  <a class="hotspot hs-android-bottom" href="#download" aria-label="Скачать Android">Android</a>
-  <a class="hotspot hs-windows-bottom" href="#download" aria-label="Скачать Windows">Windows</a>
+      <aside class="hero__float reveal">
+        <div class="float-card glass">
+          <span class="status-dot"></span>
+          <div><small data-i18n="float_label">LEKSA ECOSYSTEM</small><b data-i18n="float_title">AI, связь и документы — в одном месте</b></div>
+        </div>
+        <div class="float-card glass float-card--mini">
+          <span>✦</span><div><b data-i18n="float_ai">AI Assistant</b><small data-i18n="float_ai_sub">Идеи, перевод, помощь</small></div>
+        </div>
+      </aside>
 
-  <a class="hotspot hs-about" href="#top" aria-label="О нас">О нас</a>
-  <a class="hotspot hs-support-bottom" href="mailto:support@leksa.dev" aria-label="Поддержка">Поддержка</a>
-  <a class="hotspot hs-privacy" href="mailto:support@leksa.dev?subject=Политика%20конфиденциальности" aria-label="Политика конфиденциальности">Политика</a>
-  <a class="hotspot hs-terms" href="mailto:support@leksa.dev?subject=Условия%20использования" aria-label="Условия использования">Условия</a>
-</div>
+      <div class="hero__rail glass">
+        <div><span class="rail-icon">◫</span><b data-i18n="rail_one">ВСЁ В ОДНОМ</b><small data-i18n="rail_one_sub">Меньше переключений</small></div>
+        <div><span class="rail-icon">⌾</span><b data-i18n="rail_two">ПОД КОНТРОЛЕМ</b><small data-i18n="rail_two_sub">Приватность по умолчанию</small></div>
+        <div><span class="rail-icon">◎</span><b data-i18n="rail_three">ЛЮБОЙ ЯЗЫК</b><small data-i18n="rail_three_sub">Интерфейс и общение</small></div>
+        <div><span class="rail-icon">∞</span><b data-i18n="rail_four">БЕЗ ГРАНИЦ</b><small data-i18n="rail_four_sub">Для повседневных задач</small></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="features">
+      <div class="section__head reveal">
+        <span class="eyebrow" data-i18n="features_eyebrow">ВОЗМОЖНОСТИ</span>
+        <h2 data-i18n="features_title">Один инструмент. Без лишнего хаоса.</h2>
+        <p data-i18n="features_lead">LEKSA объединяет функции, которыми ты действительно пользуешься каждый день.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature glass reveal"><div class="feature__icon c1">✦</div><h3 data-i18n="f_ai_t">Чат с ИИ</h3><p data-i18n="f_ai_d">Ответы, планы, идеи, перевод, объяснения и помощь в повседневных задачах.</p><button data-detail="ai" aria-label="More">→</button></article>
+        <article class="feature glass reveal"><div class="feature__icon c2">▤</div><h3 data-i18n="f_docs_t">Мои документы</h3><p data-i18n="f_docs_d">Сканирование, OCR, PDF, Word и Excel. Редактирование, экспорт и отправка.</p><button data-detail="docs" aria-label="More">→</button></article>
+        <article class="feature glass reveal"><div class="feature__icon c3">✎</div><h3 data-i18n="f_notes_t">Блокнот</h3><p data-i18n="f_notes_d">Голосовые и текстовые заметки, мысли, идеи и задачи — без лишнего шума.</p><button data-detail="notes" aria-label="More">→</button></article>
+        <article class="feature glass reveal"><div class="feature__icon c4">◉</div><h3 data-i18n="f_msg_t">Мессенджер</h3><p data-i18n="f_msg_d">Чаты, файлы, геопозиция, голос, видео, группы и конференции.</p><button data-detail="messenger" aria-label="More">→</button></article>
+        <article class="feature glass reveal"><div class="feature__icon c5">⌾</div><h3 data-i18n="f_vault_t">Сейф</h3><p data-i18n="f_vault_d">Пароли, секретные заметки и важные документы в защищённом пространстве.</p><button data-detail="vault" aria-label="More">→</button></article>
+        <article class="feature glass reveal"><div class="feature__icon c6">⚙</div><h3 data-i18n="f_person_t">Персонализация</h3><p data-i18n="f_person_d">Темы, язык, голос, профиль и настройки приватности — под тебя.</p><button data-detail="personal" aria-label="More">→</button></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="products">
+      <div class="section__head reveal"><span class="eyebrow" data-i18n="products_eyebrow">НАШИ ПРОДУКТЫ</span><h2 data-i18n="products_title">Технологии для твоей свободы</h2></div>
+      <div class="product-grid">
+        <article class="product glass reveal">
+          <div class="product__mark product__mark--leksa"><img src="assets/leksa-mark.png" alt="LEKSA"></div>
+          <div><span>SOFTWARE</span><h3>LEKSA AI</h3><p data-i18n="product_ai_desc">AI‑помощник, Messenger, Office, Notebook, Vault и персонализация в одном приложении.</p><button class="btn btn--glass" data-detail="productAi" data-i18n="learn_more">Узнать больше</button></div>
+        </article>
+        <article class="product glass reveal product--key">
+          <div class="key-art"><i></i><img class="key-art__logo" src="assets/leksa-mark.png" alt="LEKSA"></div>
+          <div><span>HARDWARE · IN DEVELOPMENT</span><h3>LEKSA SecureKey</h3><p data-i18n="product_key_desc">Аппаратный ключ для дополнительного физического контроля доступа к важным данным и защищённым операциям.</p><button class="btn btn--glass" data-detail="secureKey" data-i18n="about_product">О продукте</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell details-zone">
+      <article class="detail-panel glass reveal">
+        <div><span class="eyebrow" data-i18n="docs_eyebrow">DOCUMENT WORKSPACE</span><h2 data-i18n="docs_title">Документы — не отдельная головная боль.</h2><p data-i18n="docs_desc">Сканируй, распознавай, редактируй и экспортируй. Рабочая версия остаётся в документах, а исходник может храниться отдельно и не мешать.</p></div>
+        <div class="detail-visual"><span>PDF</span><span>W</span><span>X</span><i>OCR</i></div>
+      </article>
+      <article class="detail-panel glass reveal">
+        <div><span class="eyebrow" data-i18n="msg_eyebrow">MESSENGER</span><h2 data-i18n="msg_title">От сообщения до конференции.</h2><p data-i18n="msg_desc">Личные и групповые чаты, фото и файлы, звонки, видеосвязь, группы с настройками и конференции.</p></div>
+        <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+    </section>
+
+    <section class="section shell" id="security">
+      <div class="section__head reveal"><span class="eyebrow" data-i18n="security_eyebrow">БЕЗОПАСНОСТЬ</span><h2 data-i18n="security_title">Твои данные — твои правила.</h2><p data-i18n="security_lead">Без лишней демонстрации приватности. Она просто должна работать.</p></div>
+      <div class="security-grid">
+        <article class="glass reveal"><b>01</b><h3 data-i18n="s_local_t">Локальное хранение</h3><p data-i18n="s_local_d">Чувствительные данные остаются под контролем владельца устройства.</p></article>
+        <article class="glass reveal"><b>02</b><h3 data-i18n="s_identity_t">LEKSA ID</h3><p data-i18n="s_identity_d">Связь строится вокруг уникального идентификатора, а не публичного списка людей.</p></article>
+        <article class="glass reveal"><b>03</b><h3 data-i18n="s_control_t">Настройки приватности</h3><p data-i18n="s_control_d">Пользователь сам решает, что показывать и кому быть доступным.</p></article>
+        <article class="glass reveal"><b>04</b><h3 data-i18n="s_secure_t">Защищённые сценарии</h3><p data-i18n="s_secure_d">Сейф, приватные документы и будущий SecureKey усиливают контроль над важными данными.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="family">
+      <div class="family glass reveal">
+        <div class="family__orb"><span></span><span></span><span></span></div>
+        <div><span class="eyebrow">LEKSA FAMILY CONSTELLATION</span><h2 data-i18n="family_title">Близкие люди. Сильные связи. Одно цифровое пространство.</h2><p data-i18n="family_desc">Семейное направление LEKSA для совместных сценариев, организации, связи и безопасного пространства для близких.</p><button class="btn btn--glass" data-detail="family" data-i18n="family_cta">Посмотреть концепцию</button></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="support">
+      <div class="support-grid">
+        <div class="support-copy glass reveal"><span class="eyebrow" data-i18n="support_eyebrow">ПОДДЕРЖКА</span><h2 data-i18n="support_title">Нормальная поддержка без квестов.</h2><p data-i18n="support_desc">Опиши проблему, предложение или идею. Мы подготовим письмо в поддержку LEKSA.</p><a href="mailto:support@leksa.dev">support@leksa.dev</a></div>
+        <form class="support-form glass reveal" id="supportForm">
+          <label><span data-i18n="form_name">Имя</span><input id="supportName" required autocomplete="name"></label>
+          <label><span data-i18n="form_email">Email</span><input id="supportEmail" type="email" required autocomplete="email"></label>
+          <label><span data-i18n="form_message">Сообщение</span><textarea id="supportMessage" rows="4" required></textarea></label>
+          <button class="btn btn--primary" type="submit" data-i18n="form_send">Написать в поддержку</button>
+          <small data-i18n="form_note">Откроется установленное почтовое приложение с готовым письмом.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta shell reveal">
+      <div class="cta__inner glass"><div><span class="eyebrow" data-i18n="cta_eyebrow">LEKSA AI</span><h2 data-i18n="cta_title">Готов попробовать экосистему в действии?</h2><p data-i18n="cta_desc">Выбери платформу и посмотри актуальный статус релиза.</p></div><button class="btn btn--primary" data-open="downloads"><span>↓</span><span data-i18n="download">Скачать</span></button></div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <a class="brand brand--footer" href="#home"><span class="brand__mark" aria-hidden="true"><img src="assets/leksa-mark.png" alt=""></span><span class="brand__text"><b>LEKSA</b><small>AI FOR A BETTER YOU</small></span></a>
+    <div class="footer__links"><a href="privacy.html" data-i18n="privacy">Политика конфиденциальности</a><a href="terms.html" data-i18n="terms">Условия использования</a><a href="mailto:support@leksa.dev" data-i18n="nav_support">Поддержка</a></div>
+    <small>© 2026 LEKSA AI</small>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <span class="eyebrow" id="modalEyebrow">LEKSA</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+      <div id="modalActions"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
